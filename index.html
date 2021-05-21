@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://use.fontawesome.com/c98cd9d083.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <title>Todo App</title>
+    </head>
+    <body>
+    <div class="container" id="container-1">
+        <div class="heading-container">
+            <p class="tasks">
+                Tasks
+                <span class="list">List</span>
+            </p>
+            <p class="btn" onclick="toggle()">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                <span class="add-item-hide">
+                    Add Item
+                </span>
+            </p>
+        </div>
+        <div class="no-todo-items">
+            <p>No Item in the todo list</p>
+        </div>
+        <div class="card-container">
+            
+        </div>
+    </div>
+    
+    <div class="popup" id="popup-1">
+        <p class="Add-New-list">Add New List</p>
+        <input type="text" placeholder="Add New List" onfocus="this.value=''" id="new-list">
+        <div class="btn-container">
+            <button class="Add-button " onclick="addList()">Add</button>
+            <button class="Add-delete" onclick="toggle()">Close</button>
+        </div> 
+    </div>
+    <div class="popup-2"  id="popup-2">
+        <p class="Add-New-list">Add New Item</p>
+        <input type="text" placeholder="Add New Item" onfocus="this.value=''" id="new-item">
+        <div class="btn-container">
+            <button class="Add-button" onclick="newSubTask()">Add</button>
+            <button class="Add-delete" onclick="toggle2()">Close</button>
+        </div>
+    </div>
+
+    
+    <div class="container-2" id="container-2">
+    
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

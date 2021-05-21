@@ -1,0 +1,380 @@
+body{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+    height: 100vh;
+    color: white;
+    background-color: black;
+    font-size: 2rem;
+    font-family: "Roboto","san-serif";
+}
+
+.container{
+    display: block;
+    width: 65%;
+    height:80vh;
+    
+    margin:auto;
+    margin-top: 1.3rem;
+    /* display: none; */
+
+}
+
+#container-1.active,#container-2.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
+.heading-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.tasks{
+    font-size: 3rem;
+    font-weight: bolder;
+    
+}
+
+.list{
+    font-size: 2.8rem;
+    font-weight: lighter;
+
+}
+
+.fa-plus-circle{
+   color: #4b8ce8;
+   cursor: pointer;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+
+
+
+.no-todo-items{
+    display: block;
+}
+
+.no-todo-items.active{
+    display: none;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    
+    /* display: none; */
+}
+
+.card{
+    position: relative;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    min-height: 335px;
+    min-width: 229px;
+    text-align:center;
+    font-size: 1.6rem;
+    border-radius: 4%;
+    border: 0.9px solid tomato;
+    margin-bottom:1rem
+}
+
+#card-heading{
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+
+
+
+.ul-list{
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 90px;
+    font-size: 20px;
+}
+
+
+
+
+.ul-list li .markdone{
+    font-size: 10px;
+    height: 20px;
+    width: auto;
+    background-color: #4b8ce8;
+    color: white;
+    border:none;
+    border-radius: 25px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.ul-list li.active{
+    text-decoration: line-through;
+    color: tomato;
+}
+
+.markdone.active{
+    display: none;
+}
+
+
+.footer{
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3rem;
+    position: absolute;
+    bottom: 9%;
+    right: 4%;
+    font-size:32px;
+}
+
+.footer  .btn{
+    margin: 0;
+    font-size:34px;
+    border: 0;
+    background-color: white;
+}
+
+
+
+.footer .delete-btn{
+    width: 32px;
+    height: 32px;
+    background-color: #e74c3c;
+    cursor: pointer;
+    color: white;
+    background: #e74c3c;
+    border-radius: 20px;
+    opacity: 1;
+    border: none;
+    margin: 10px;
+}
+
+.card-heading{
+    margin-top: 0.8em;
+    color: tomato;
+    margin-bottom: 0;
+}
+.back{
+    cursor: pointer;
+}
+
+
+.popup {
+    display: block;
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 440px;
+    height: 30%;
+    text-align: center;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease;
+}
+
+#popup-1.active,#popup-2.active{
+    visibility: visible;
+    top: 30%;
+    opacity: 1;
+    transition: all 0.7s ease;
+    z-index: 4;
+}
+
+.popup p,.popup-2 p{
+    font-size: 23px;
+    margin-top: 2rem;
+    margin-bottom: 0.7em;
+    color: rgb(248, 60, 27);
+    font-weight: bold;
+}
+
+.popup input,.popup-2 input{
+    text-align: center;
+    width: 320px;
+    height: 43px;
+    padding: 1px 2px;
+    border: 1px solid tomato;
+    outline: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    box-shadow: 3px 3px 3px #00000029;
+    overflow: hidden;
+}
+
+.popup button,.popup-2 button{
+    color: white;
+    background-color: rgb(248, 60, 27);
+    border: none;
+    font-size: 1.3rem;
+    width: 6rem;
+    height: 2.6rem;
+    border-radius: 2rem;
+    margin-top: 0.9rem;
+    margin-left: 0.8rem;
+    cursor: pointer;
+}
+
+.popup-2{
+    display: block;
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 440px;
+    height: 30%;
+    text-align: center;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease;
+}   
+
+
+.container-2{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+}
+
+.container-2 .heading-container-back{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.container-2 #card-heading
+{
+    cursor: initial;
+}
+
+
+
+
+
+@media screen and (max-width:732px){
+
+    
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .container .add-item-hide,hr{
+        display: none;
+    }
+
+    .container{
+        width: 80%;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .heading-container{
+        margin: 0%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: lightgray;
+    }
+    .tasks{
+        font-size: 2rem;
+    }
+    .list{
+        font-size: 2rem;
+    }
+    
+    .card-container{
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 100vh;
+
+    }
+
+    .card-heading{
+        color: #6a6a72;
+    }
+    .card{
+        text-align: center;
+        width: 75%;
+        min-height: 40px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        padding-bottom: 0.8rem;
+        color: black;
+    }
+    .container .card-item,.footer,.ul-list{
+        display: none;
+    }
+
+
+    .popup,.popup-2{
+        left: 10%;
+        width:75%;
+    }
+    .popup p, .popup-2 p{
+        font-size: 1.1rem;
+    }
+    .popup input, .popup-2 input{
+        width: 80%;
+    }
+
+    .popup button, .popup-2 button{
+        font-size: 0.8rem;
+        width: 5rem;
+        height: 2.1rem;
+    }
+
+    .container-2{
+        width: 100%;
+        justify-content: flex-start;
+    }    
+
+    .container-2 .card{
+        width: 68%;
+        min-height: 59%;
+    }
+
+    .container-2 .heading-container-back{
+        width:90%;
+        font-size: 1.4rem;
+    }
+}
