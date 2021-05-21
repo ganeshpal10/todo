@@ -330,6 +330,8 @@ let redirect = (item) =>{
 
 
 let goback = () =>{
+
+    flag = true
     container.style.display = "block";
 
     container2.style.visibility = "hidden"

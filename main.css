@@ -345,7 +345,7 @@ body{
         display: none;
     }
 
-
+    
     .popup,.popup-2{
         left: 10%;
         width:75%;
@@ -370,7 +370,15 @@ body{
 
     .container-2 .card{
         width: 68%;
-        min-height: 59%;
+        min-height: 281px;
+    }
+    .container-2 .card-item,.container-2 .footer,.container-2 .ul-list,.container-2 .add-item-hide,.container-2 hr{
+       display: block;
+    }
+
+    .container-2 .footer
+    {
+        display: flex;
     }
 
     .container-2 .heading-container-back{
