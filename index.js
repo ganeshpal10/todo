@@ -245,6 +245,9 @@ let remove = (item) =>{
     else{
         noToDo.classList.remove("active")
     }
+    if (!flag) {
+        goback();
+    }
     render()
 }
 
